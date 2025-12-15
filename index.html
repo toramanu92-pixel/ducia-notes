@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des Notes Scolaires</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Gestion des Notes Scolaires</h1>
+
+<section>
+  <h2>Informations générales</h2>
+  <input id="nom" placeholder="Prénom et Nom">
+  <input id="ecole" placeholder="École">
+  <input id="ief" placeholder="Inspection (IEF)">
+  <input id="annee" placeholder="Année académique">
+  <input id="trimestre" placeholder="Trimestre">
+</section>
+
+<section>
+  <h2>Ajouter une matière</h2>
+  <input id="matiere" placeholder="Nom de la matière">
+  <button onclick="ajouterMatiere()">Ajouter</button>
+  <ul id="liste-matieres"></ul>
+</section>
+
+<section>
+  <h2>Ajouter une note</h2>
+  <input id="eleve" placeholder="Nom de l'élève">
+  <select id="matiere-select"></select>
+  <input id="note" type="number" placeholder="Note /20">
+  <button onclick="ajouterNote()">Ajouter note</button>
+</section>
+
+<section>
+  <h2>Notes enregistrées</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Élève</th>
+        <th>Matière</th>
+        <th>Note</th>
+      </tr>
+    </thead>
+    <tbody id="table-notes"></tbody>
+  </table>
+</section>
+
+<script type="module" src="firebase.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
